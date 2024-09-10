@@ -17,11 +17,16 @@ public class MyServlet2 extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
+		String fname = request.getParameter("fname");
+		String lname = request.getParameter("lname");
+
+
 		// send HTML page to client
 		out.println("<html>");
-		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
+		out.println("<head><title>Actividad 1. Servlets</title></head>");
 		out.println("<body>");
-		out.println("<h1>Bienvenido!!</h1>");
+		out.println("<h1>Bienvenid@ "  + fname + " " + lname + " !!</h1>");
+		out.println("</body></html>");
 	}
 
 }
